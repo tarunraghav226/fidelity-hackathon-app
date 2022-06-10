@@ -1,11 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
-apply plugin: "androidx.navigation.safeargs.kotlin"
-apply plugin: 'com.android.application'
-apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdk 32
@@ -60,6 +59,24 @@ dependencies {
     //Hilt lifecycle
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
     kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    /*Retrofit+RXJava*/
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.7.1'
+
+    implementation('com.squareup.retrofit2:retrofit:2.9.0') {
+        exclude module: 'com.squareup.okio'
+        exclude module: 'okhttp'
+    }
+    implementation('com.squareup.retrofit2:converter-gson:2.9.0') {
+        exclude module: 'okhttp'
+    }
+
+    /*OkHttp Client*/
+    implementation 'commons-io:commons-io:20030203.000550'
+    implementation 'commons-net:commons-net:20030805.205232'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
 }
 
 kapt {
