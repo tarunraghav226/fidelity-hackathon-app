@@ -11,6 +11,34 @@
         android:label="fragment_my_home"
         tools:layout="@layout/splash_fragment">
 
+
+        <action
+            android:id="@+id/action_splashFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="com.example.fidelityhackathon.ui.authentication.AuthenticationFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/authentication_fragment">
+
+        <action
+            android:id="@+id/action_authenticationFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.fidelityhackathon.ui.home.HomePageFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/home_page_fragment">
+
+            <argument
+                android:name="access_token"
+                app:argType="string"
+                app:nullable="false"/>
+
     </fragment>
 
 </navigation>

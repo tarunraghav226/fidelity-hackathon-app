@@ -3,4 +3,10 @@
     <string name="carbon_footprint">Carbon Footprint Community</string>
     <string name="footprint_community">Footprint Community</string>
     <string name="anti_carbon">Anti-Carbon</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="continue_further">Continue</string>
+    <string name="na">N/A</string>
 </resources>
