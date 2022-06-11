@@ -47,6 +47,22 @@
                 android:name="access_token"
                 app:argType="string"
                 app:nullable="false"/>
+        <action
+            android:id="@+id/action_homePageFragment_to_communityMembersFragment"
+            app:destination="@id/communityMembersFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/communityMembersFragment"
+        android:name="com.example.fidelityhackathon.ui.community.CommunityMembersFragment"
+        android:label="community_members"
+        tools:layout="@layout/community_members_fragment">
+
+        <argument
+            android:name="access_token"
+            app:argType="string"
+            app:nullable="false"/>
 
     </fragment>
 
