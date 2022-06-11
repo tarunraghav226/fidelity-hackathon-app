@@ -92,6 +92,11 @@ class HomePageFragment: Fragment() {
         binding.button.setOnClickListener {
             addUserInCommunity()
         }
+
+        binding.carbonGuidelines.setOnClickListener {
+            val action = HomePageFragmentDirections.actionHomePageFragmentToGuidelinesFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun moveToMemberListingPage() {
