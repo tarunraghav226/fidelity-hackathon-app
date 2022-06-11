@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_communityMembersFragment"
             app:destination="@id/communityMembersFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_guidelinesFragment"
+            app:destination="@id/guidelinesFragment" />
 
     </fragment>
 
@@ -65,5 +68,11 @@
             app:nullable="false"/>
 
     </fragment>
+
+    <fragment
+        android:id="@+id/guidelinesFragment"
+        android:name="com.example.fidelityhackathon.ui.guidelines.GuidelinesFragment"
+        android:label="guidelines"
+        tools:layout="@layout/carbon_footprint_guidelines"/>
 
 </navigation>
