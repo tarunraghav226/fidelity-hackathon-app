@@ -84,5 +84,27 @@ class HomePageFragment: Fragment() {
                 findNavController().popBackStack()
             }
         }
+
+        binding.button2.setOnClickListener {
+            moveToMemberListingPage()
+        }
+
+        binding.button.setOnClickListener {
+            addUserInCommunity()
+        }
+    }
+
+    private fun moveToMemberListingPage() {
+        val action = HomePageFragmentDirections.actionHomePageFragmentToCommunityMembersFragment(args.accessToken)
+        findNavController().navigate(action)
+    }
+
+    private fun addUserInCommunity() {
+        viewLifecycleOwner.lifecycleScope.launch{
+            communityViewModel.doAddUserInCommunity(args.accessToken).let{
+                if(!it.isSuccessful) return@let
+                moveToMemberListingPage()
+            }
+        }
     }
 }
