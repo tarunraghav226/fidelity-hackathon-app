@@ -6,6 +6,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Headers
+import retrofit2.http.POST
 
 interface CommunityAPIService {
     @Headers("Content-Type: application/json")
@@ -13,7 +14,7 @@ interface CommunityAPIService {
     suspend fun checkUserInCommunity(@Header("x-auth-token") token: String): Response<CheckUserInCommunityResponse>
 
     @Headers("Content-Type: application/json")
-    @GET("/community/add-user-in-community")
+    @POST("/community/add-user-in-community")
     suspend fun addUserInCommunity(@Header("x-auth-token") token: String): Response<CommunityMembersResponse>
 
     @Headers("Content-Type: application/json")
