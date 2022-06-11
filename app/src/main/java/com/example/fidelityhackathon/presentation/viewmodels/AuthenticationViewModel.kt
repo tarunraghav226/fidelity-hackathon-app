@@ -9,6 +9,7 @@ import com.example.fidelityhackathon.data.models.LoginAndSignUpPayLoad
 import com.example.fidelityhackathon.data.repo.AuthenticationRepository
 import com.example.fidelityhackathon.storage.DataStoreInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -35,5 +36,10 @@ class AuthenticationViewModel @Inject constructor(
 
     suspend fun clearStoreData(){
         dataStoreManager.clearData()
+    }
+
+    suspend fun getAuthenticationToken(): String {
+        val accessTokenKey = stringPreferencesKey("access_token")
+        return dataStoreManager.get(accessTokenKey, "").first()
     }
 }
