@@ -10,4 +10,6 @@
     <color name="light_grey">#B6B6B6</color>
     <color name="transparent">@android:color/transparent</color>
     <color name="gc_0400">#D0D2D4</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#06770A</color>
 </resources>

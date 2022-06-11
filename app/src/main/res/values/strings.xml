@@ -9,4 +9,12 @@
     <string name="signup">SignUp</string>
     <string name="continue_further">Continue</string>
     <string name="na">N/A</string>
+    <string name="anti_carbon_footprint_community">Anti-carbon footprint community</string>
+    <string name="anti_carbon_footprint_community_guidelines">Anti-carbon footprint community guidelines</string>
+    <string name="logout">Logout</string>
+    <string name="show_members">Show Members</string>
+    <string name="join_community">Join community</string>
+    <string name="app_version">App version: %s</string>
+    <string name="community_joined">Community Joined</string>
+    <string name="not_in_community">Not in community</string>
 </resources>

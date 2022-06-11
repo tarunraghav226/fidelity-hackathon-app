@@ -14,10 +14,14 @@
 
         <action
             android:id="@+id/action_splashFragment_to_authenticationFragment"
-            app:destination="@id/authenticationFragment" />
+            app:destination="@id/authenticationFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
         <action
             android:id="@+id/action_splashFragment_to_homePageFragment"
-            app:destination="@id/homePageFragment" />
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -28,7 +32,9 @@
 
         <action
             android:id="@+id/action_authenticationFragment_to_homePageFragment"
-            app:destination="@id/homePageFragment" />
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
