@@ -23,7 +23,7 @@ class AuthenticationViewModel @Inject constructor(
     suspend fun doLogin(payLoad: LoginAndSignUpPayLoad) =
         authenticationRepository.doLogin(payLoad)
 
-    suspend fun saveTokens(accessToken: String, refreshToken: String, activityContext: Context) {
+    suspend fun saveTokens(accessToken: String, refreshToken: String) {
         val accessTokenKey = stringPreferencesKey("access_token")
         val refreshTokenKey = stringPreferencesKey("refresh_token")
         val isLoggedIn = booleanPreferencesKey("is_logged_in")
