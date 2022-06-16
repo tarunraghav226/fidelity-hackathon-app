@@ -30,4 +30,5 @@
     <string name="optimise_images">Optimize Images</string>
     <string name="use_webp">Use the WebP format</string>
     <string name="lazy_load">Lazy load images</string>
+    <string name="community_members">Community members</string>
 </resources>
